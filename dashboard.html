@@ -1,31 +1,40 @@
 
-            <html><head><meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
             <style>
-                body { font-family: sans-serif; margin: 20px; background: #f4f7f6; color: #333; }
-                .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
-                table { width: 100%; border-collapse: collapse; }
-                th, td { border-bottom: 1px solid #ddd; padding: 12px 10px; text-align: left; }
-                th { background: #2c3e50; color: white; }
+                body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background: #f0f2f5; color: #333; }
+                .container { max-width: 1200px; margin: auto; }
+                .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+                table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+                th, td { border-bottom: 1px solid #eee; padding: 12px; text-align: left; }
+                th { background: #2c3e50; color: white; border-radius: 4px; }
                 .buy-signal { color: #e74c3c; font-weight: bold; }
-                pre { background: #272822; color: #f8f8f2; padding: 15px; border-radius: 5px; overflow-x: auto; font-size: 0.85em; }
-                .nav-link { display: inline-block; margin-bottom: 15px; color: #3498db; text-decoration: none; }
-            </style><title>Detailed Dash</title></head><body>
-                <a class="nav-link" href="index.html">← 簡易版へ戻る</a>
-                <h1>🚀 Detailed Dashboard</h1>
-                <p>最終更新: 02/11 22:00:11 | <strong>Cash: $658.00</strong></p>
-                <div class="card">
-                    <h2>📍 保有ポジション</h2>
-                    <table><thead><tr><th>銘柄</th><th>購入価格</th><th>状況</th></tr></thead>
-                    <tbody><tr><td colspan='3'>なし</td></tr></tbody></table>
+                pre { background: #1e1e1e; color: #dcdcdc; padding: 15px; border-radius: 8px; overflow-x: auto; font-size: 13px; }
+                .header-flex { display: flex; justify-content: space-between; align-items: center; }
+            </style><title>Precision Dashboard</title></head><body>
+            <div class="container">
+                <div class="header-flex">
+                    <h1>🚀 Gemini Precision Bot</h1>
+                    <p>最終更新: 02/11 22:36:58</p>
                 </div>
                 <div class="card">
-                    <h2>🔥 期待値ランキング</h2>
-                    <table><thead><tr><th>銘柄</th><th>価格</th><th>RSI</th><th>スコア</th><th>シグナル</th></tr></thead>
-                    <tbody><tr><td>AMZN</td><td>206.99</td><td>32.9</td><td>69.2</td><td class='buy-signal'>WAIT</td></tr><tr><td>BITO</td><td>11.52</td><td>28.2</td><td>62.2</td><td class='buy-signal'>WAIT</td></tr><tr><td>UPST</td><td>39.06</td><td>52.6</td><td>53.6</td><td class='buy-signal'>WAIT</td></tr><tr><td>RCL</td><td>347.07</td><td>57.7</td><td>51.5</td><td class='buy-signal'>WAIT</td></tr><tr><td>MAR</td><td>359.35</td><td>76.6</td><td>48.4</td><td class='buy-signal'>WAIT</td></tr><tr><td>U</td><td>29.05</td><td>63.0</td><td>48.0</td><td class='buy-signal'>WAIT</td></tr><tr><td>T</td><td>27.40</td><td>61.0</td><td>47.5</td><td class='buy-signal'>WAIT</td></tr><tr><td>OPEN</td><td>4.70</td><td>34.7</td><td>44.7</td><td class='buy-signal'>WAIT</td></tr><tr><td>VZ</td><td>47.39</td><td>64.5</td><td>42.8</td><td class='buy-signal'>WAIT</td></tr><tr><td>UBER</td><td>73.49</td><td>38.7</td><td>42.5</td><td class='buy-signal'>WAIT</td></tr><tr><td>DAL</td><td>74.48</td><td>56.7</td><td>42.2</td><td class='buy-signal'>WAIT</td></tr><tr><td>PFE</td><td>27.59</td><td>64.6</td><td>41.5</td><td class='buy-signal'>WAIT</td></tr><tr><td>GOOGL</td><td>318.55</td><td>38.2</td><td>41.4</td><td class='buy-signal'>WAIT</td></tr><tr><td>LI</td><td>18.88</td><td>63.7</td><td>41.1</td><td class='buy-signal'>WAIT</td></tr><tr><td>SNOW</td><td>182.64</td><td>65.3</td><td>40.9</td><td class='buy-signal'>WAIT</td></tr><tr><td>NCLH</td><td>23.57</td><td>57.8</td><td>40.3</td><td class='buy-signal'>WAIT</td></tr><tr><td>WFC</td><td>91.93</td><td>44.2</td><td>40.3</td><td class='buy-signal'>WAIT</td></tr><tr><td>XOM</td><td>151.56</td><td>69.6</td><td>39.9</td><td class='buy-signal'>WAIT</td></tr><tr><td>SNAP</td><td>5.22</td><td>39.3</td><td>39.7</td><td class='buy-signal'>WAIT</td></tr><tr><td>CVX</td><td>182.26</td><td>58.9</td><td>39.5</td><td class='buy-signal'>WAIT</td></tr></tbody></table>
+                    <h3>💰 資産状況</h3>
+                    <p>Cash: <strong>$658.00</strong> | スロット: 0 / 5</p>
                 </div>
-                <details><summary>⚙️ パラメータ詳細</summary>
-                <div class="card" style="margin-top:10px;"><pre>{
+                <div class="card">
+                    <h3>📍 現在の保有</h3>
+                    <table><thead><tr><th>銘柄</th><th>買値</th><th>状況</th></tr></thead>
+                    <tbody><tr><td colspan='3'>ノーポジ</td></tr></tbody></table>
+                </div>
+                <div class="card">
+                    <h3>🔥 期待値ランキング (TOP 20)</h3>
+                    <table><thead><tr><th>銘柄</th><th>価格</th><th>RSI</th><th>スコア</th><th>判定</th></tr></thead>
+                    <tbody><tr><td>AMZN</td><td>206.99</td><td>32.9</td><td>69.2</td><td class='buy-signal'>WAIT</td></tr><tr><td>UPST</td><td>39.06</td><td>52.6</td><td>53.6</td><td class='buy-signal'>WAIT</td></tr><tr><td>RCL</td><td>347.07</td><td>57.7</td><td>51.5</td><td class='buy-signal'>WAIT</td></tr><tr><td>BKNG</td><td>4281.15</td><td>34.5</td><td>50.4</td><td class='buy-signal'>WAIT</td></tr><tr><td>MAR</td><td>359.35</td><td>76.6</td><td>48.4</td><td class='buy-signal'>WAIT</td></tr><tr><td>U</td><td>29.05</td><td>63.0</td><td>48.0</td><td class='buy-signal'>WAIT</td></tr><tr><td>T</td><td>27.40</td><td>61.0</td><td>47.5</td><td class='buy-signal'>WAIT</td></tr><tr><td>OPEN</td><td>4.70</td><td>34.7</td><td>44.7</td><td class='buy-signal'>WAIT</td></tr><tr><td>VZ</td><td>47.39</td><td>64.5</td><td>42.8</td><td class='buy-signal'>WAIT</td></tr><tr><td>UBER</td><td>73.49</td><td>38.7</td><td>42.5</td><td class='buy-signal'>WAIT</td></tr><tr><td>DAL</td><td>74.48</td><td>56.7</td><td>42.2</td><td class='buy-signal'>WAIT</td></tr><tr><td>PFE</td><td>27.59</td><td>64.6</td><td>41.5</td><td class='buy-signal'>WAIT</td></tr><tr><td>GOOGL</td><td>318.55</td><td>38.2</td><td>41.4</td><td class='buy-signal'>WAIT</td></tr><tr><td>LI</td><td>18.88</td><td>63.7</td><td>41.1</td><td class='buy-signal'>WAIT</td></tr><tr><td>SNOW</td><td>182.64</td><td>65.3</td><td>40.9</td><td class='buy-signal'>WAIT</td></tr><tr><td>NCLH</td><td>23.57</td><td>57.8</td><td>40.3</td><td class='buy-signal'>WAIT</td></tr><tr><td>WFC</td><td>91.93</td><td>44.2</td><td>40.3</td><td class='buy-signal'>WAIT</td></tr><tr><td>XOM</td><td>151.56</td><td>69.6</td><td>39.9</td><td class='buy-signal'>WAIT</td></tr><tr><td>SNAP</td><td>5.22</td><td>39.3</td><td>39.7</td><td class='buy-signal'>WAIT</td></tr><tr><td>CVX</td><td>182.26</td><td>58.9</td><td>39.5</td><td class='buy-signal'>WAIT</td></tr></tbody></table>
+                </div>
+                <details><summary>🎓 コア学習銘柄（20）</summary>
+                <div class="card"><table><thead><tr><th>銘柄</th><th>価格</th><th>RSI</th><th>スコア</th><th>判定</th></tr></thead>
+                <tbody><tr><td>PLTR</td><td>139.49</td><td>47.1</td><td>26.0</td><td>WAIT</td></tr><tr><td>SOFI</td><td>21.17</td><td>48.3</td><td>18.4</td><td>WAIT</td></tr><tr><td>PFE</td><td>27.59</td><td>64.6</td><td>41.5</td><td>WAIT</td></tr><tr><td>F</td><td>13.59</td><td>41.2</td><td>22.8</td><td>WAIT</td></tr><tr><td>SNAP</td><td>5.22</td><td>39.3</td><td>39.7</td><td>WAIT</td></tr><tr><td>U</td><td>29.05</td><td>63.0</td><td>48.0</td><td>WAIT</td></tr><tr><td>AAL</td><td>15.09</td><td>57.3</td><td>30.9</td><td>WAIT</td></tr><tr><td>CCL</td><td>33.33</td><td>59.1</td><td>38.9</td><td>WAIT</td></tr><tr><td>BAC</td><td>55.40</td><td>46.5</td><td>36.1</td><td>WAIT</td></tr><tr><td>TQQQ</td><td>51.02</td><td>48.1</td><td>21.4</td><td>WAIT</td></tr><tr><td>MARA</td><td>7.66</td><td>40.0</td><td>26.8</td><td>WAIT</td></tr><tr><td>RIOT</td><td>14.83</td><td>53.1</td><td>25.4</td><td>WAIT</td></tr><tr><td>NIO</td><td>4.97</td><td>55.2</td><td>33.7</td><td>WAIT</td></tr><tr><td>XPEV</td><td>17.83</td><td>57.7</td><td>33.4</td><td>WAIT</td></tr><tr><td>NCLH</td><td>23.57</td><td>57.8</td><td>40.3</td><td>WAIT</td></tr><tr><td>OPEN</td><td>4.70</td><td>34.7</td><td>44.7</td><td>WAIT</td></tr><tr><td>AMC</td><td>1.35</td><td>38.5</td><td>30.9</td><td>WAIT</td></tr><tr><td>LCID</td><td>10.95</td><td>53.3</td><td>38.5</td><td>WAIT</td></tr><tr><td>GRAB</td><td>4.32</td><td>54.1</td><td>26.2</td><td>WAIT</td></tr><tr><td>HOOD</td><td>85.75</td><td>51.8</td><td>26.4</td><td>WAIT</td></tr></tbody></table></div></details>
+                <details><summary>⚙️ 稼働パラメータ (JSON)</summary>
+                <div class="card"><pre>{
   "system_config": {
     "bot_name": "Gemini_Swing_Bot_v1_SmallCap",
     "dry_run": true,
@@ -79,6 +88,7 @@
       "DKNG",
       "TSM",
       "WFC",
+      "META",
       "ARM",
       "DIS",
       "JPM",
@@ -102,6 +112,7 @@
       "BIDU",
       "MAR",
       "RCL",
+      "BKNG",
       "LABU"
     ],
     "ai_learning_symbols": [
@@ -145,14 +156,25 @@
     "rsi_period": 14,
     "rsi_buy_threshold": 45.0,
     "min_relative_volume": 1.5,
+    "adx_period": 14,
     "adx_threshold": 20.0,
+    "bb_period": 20,
     "bb_std_dev": 1.2,
+    "rvol_period": 20,
     "relative_strength_days": 30,
     "ma_short_period": 20,
-    "ma_long_period": 50
+    "ma_long_period": 50,
+    "priority_score_weights": {
+      "note": "期待値計算の重み設定",
+      "rsi_max": 40.0,
+      "rvol_weight": 10.0,
+      "adx_weight": 1.0
+    }
   },
   "exit_management": {
     "note": "撤退・利確（守り）のパラメータ",
+    "take_profit_pct": 5.0,
+    "stop_loss_pct": -3.0,
     "stop_loss_atr_multiplier": 2.0,
     "take_profit_atr_multiplier": 4.0,
     "trailing_stop_activation_pct": 5.0,
@@ -163,8 +185,9 @@
     "note": "1枠を総資産の20%に設定",
     "max_positions": 5,
     "risk_per_trade_pct": 1.0,
-    "max_capital_allocation_pct": 0.2
+    "max_capital_allocation_pct": 0.2,
+    "single_stock_limit_pct": 0.3
   }
 }</pre></div></details>
-            </body></html>
+            </div></body></html>
             
