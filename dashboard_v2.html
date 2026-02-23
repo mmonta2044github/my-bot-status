@@ -1,0 +1,148 @@
+
+            <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background: #f0f2f5; color: #333; }
+                .container { max-width: 1200px; margin: auto; }
+                .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
+                table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+                th, td { border-bottom: 1px solid #eee; padding: 12px; text-align: left; }
+                th { background: #2c3e50; color: white; border-radius: 4px; }
+                .buy-signal { color: #e74c3c; font-weight: bold; }
+                pre { background: #1e1e1e; color: #dcdcdc; padding: 15px; border-radius: 8px; overflow-x: auto; font-size: 13px; }
+            </style><title>Precision Dashboard</title></head><body>
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h1>🚀 Gemini Precision Bot</h1><p>最終更新: 02/23 21:37:59</p>
+                </div>
+                <div class="card">
+                    <h3>💰 資産状況</h3>
+                    <p>Total Nav: <strong>$1333.33</strong> | Cash: <strong>$1333.33</strong> | 枠: 0 / 8</p>
+                </div>
+                <div class="card">
+                    <h3>📍 現在の保有（価格乖離ベース損益）</h3>
+                    <table><thead><tr><th>銘柄</th><th>買値</th><th>最新値</th><th>損益(率)</th><th>目標価格</th><th>損切価格</th><th>状況</th></tr></thead>
+                    <tbody><tr><td colspan='7'>ノーポジ</td></tr></tbody></table>
+                </div>
+                <div class="card">
+                    <h3>🔥 期待値ランキング (TOP 20)</h3>
+                    <table><thead><tr><th>銘柄</th><th>価格</th><th>RSI</th><th>スコア</th><th>判定</th></tr></thead>
+                    <tbody></tbody></table>
+                </div>
+                <details><summary>🎓 コア学習銘柄（20銘柄）</summary><div class="card"><table><thead><tr><th>銘柄</th><th>価格</th><th>RSI</th><th>スコア</th><th>判定</th></tr></thead><tbody></tbody></table></div></details>
+                <details><summary>⚙️ 稼働パラメータ (JSON)</summary><div class="card"><pre>{
+  "system_config": {
+    "bot_name": "Gemini_Swing_Bot_v2_SmallCap",
+    "dry_run": true,
+    "ai_learning_symbols": [
+      "PLTR",
+      "SOFI",
+      "PFE",
+      "F",
+      "SNAP",
+      "U",
+      "AAL",
+      "CCL",
+      "BAC",
+      "TQQQ",
+      "MARA",
+      "RIOT",
+      "NIO",
+      "XPEV",
+      "NCLH",
+      "OPEN",
+      "AMC",
+      "LCID",
+      "GRAB",
+      "HOOD"
+    ]
+  },
+  "equity_management": {
+    "initial_usd_balance": 1333.33,
+    "current_usd_balance": 1333.33,
+    "commission_rate": 0.00495
+  },
+  "budget_rules": {
+    "note": "憲法第1項：物理的制約の定義",
+    "primary_limit_rate": 0.2,
+    "secondary_limit_rate": 0.3,
+    "min_stock_price": 2.0,
+    "commission_rate": 0.00495
+  },
+  "position_sizing": {
+    "max_capital_allocation_pct": 0.2,
+    "single_stock_limit_pct": 0.3,
+    "max_positions": 5,
+    "risk_per_trade_pct": 1.0
+  },
+  "market_filters": {
+    "min_price": 2.0,
+    "min_volume_avg_20d": 500000,
+    "min_market_cap_mil": 100
+  },
+  "target_universe": [
+    "JPM",
+    "BAC",
+    "WFC",
+    "C",
+    "USB",
+    "XOM",
+    "CVX",
+    "COP",
+    "SLB",
+    "HAL",
+    "VLO",
+    "PFE",
+    "BMY",
+    "CVS",
+    "JNJ",
+    "T",
+    "VZ",
+    "NEE",
+    "DUK",
+    "SO",
+    "PG",
+    "KO",
+    "PEP"
+  ],
+  "market_regime": {
+    "vix_upper_limit": 22.0,
+    "spy_trend_ma_period": 200,
+    "allow_new_entries_in_downtrend": false,
+    "geirai_zones": [
+      "2026-02-23T14:30:00Z"
+    ]
+  },
+  "entry_signals": {
+    "note": "Capital Defense & Value Rotation. Strict RVOL 1.5 enforced to capture high-volatility initial moves in defensive and value sectors.",
+    "rsi_period": 14,
+    "rsi_buy_threshold": 50.0,
+    "min_relative_volume": 1.5,
+    "adx_period": 14,
+    "adx_threshold": 20.0,
+    "bb_period": 20,
+    "bb_std_dev": 1.8,
+    "rvol_period": 20,
+    "relative_strength_days": 30,
+    "ma_short_period": 20,
+    "ma_long_period": 50,
+    "priority_score_weights": {
+      "note": "Institutional momentum detection focused",
+      "rsi_max": 65.0,
+      "rvol_weight": 10.0,
+      "adx_weight": 5.0
+    }
+  },
+  "exit_management": {
+    "note": "Slide trading strategy. Tolerating moderate MDD for value rotation, trailing activation delayed to avoid killing initial momentum.",
+    "take_profit_pct": 12.0,
+    "stop_loss_pct": -10.0,
+    "stop_loss_atr_multiplier": 2.0,
+    "take_profit_atr_multiplier": 3.0,
+    "trailing_stop_activation_pct": 5.0,
+    "trailing_stop_callback_pct": 2.5,
+    "time_stop_days": 30,
+    "earnings_avoid_days": 0
+  }
+}</pre></div></details>
+            </div></body></html>
+            
